@@ -29,85 +29,85 @@ console.log(fn(Math.random() * 10));
 
 We initialize `x` and `y`.
 
-```js [1-2]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="1-2">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = a(x);
-x = 4;
-console.log(fn(Math.random() * 10));
-```
+  const fn = a(x);
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
 
 ==========
 
 We initialize `a`.
 
-```js [3-7]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="3-7">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = a(x);
-x = 4;
-console.log(fn(Math.random() * 10));
-```
-
-==========
-
-We initialize `fn` using `a` and `x`.
-
-```js [1,3-7,11]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
-
-// ***** Statement will go here *****
-
-const fn = a(x);
-x = 4;
-console.log(fn(Math.random() * 10));
-```
+  const fn = a(x);
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
 
 ==========
 
 We initialize `fn` using `a` and `x`.
 
-```js [11-15]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="1,3-7,11">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(2) {
-  return function(c) {
-    return x + y + Math.abs(2) + c;
-  }; 
-};
-x = 4;
-console.log(fn(Math.random() * 10));
-```
+  const fn = a(x);
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
+
+==========
+
+We initialize `fn` using `a` and `x`.
+
+<pre data-id="code-animation"><code data-trim data-line-numbers="11-15">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
+
+  // ***** Statement will go here *****
+
+  const fn = function(2) {
+    return function(c) {
+      return x + y + Math.abs(2) + c;
+    }; 
+  };
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
 
 Note: Let's just substitute so we can see what we're working with.
 
@@ -115,23 +115,23 @@ Note: Let's just substitute so we can see what we're working with.
 
 We initialize `fn` using `a` and `x`.
 
-```js [11-13]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="11-13">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + 2 + c;
-};
-x = 4;
-console.log(fn(Math.random() * 10));
-```
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
 
 Note: Absolute value of `2` is just `2`.
 
@@ -139,143 +139,166 @@ Note: Absolute value of `2` is just `2`.
 
 Now we're getting somewhere!
 
-```js [1-15]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers>
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + 2 + c;
-};
-x = 4;
-console.log(fn(Math.random() * 10));
-```
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
 
 ==========
 
 The output calculation is harder to follow.
 
-```js [15]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="15">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + 2 + c;
-};
-x = 4;
-console.log(fn(Math.random() * 10));
-```
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
 
 ==========
 
 Let's extract our printed number to variables.
 
-```js [15-17]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="15-17">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + 2 + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = fn(input);
-console.log(printedNumber);
-```
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  console.log(fn(input));
+</code></pre>
+
+==========
+
+Let's extract our printed number to variables.
+
+<pre data-id="code-animation"><code data-trim data-line-numbers="15-17">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
+
+  // ***** Statement will go here *****
+
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = fn(input);
+  console.log(printedNumber);
+</code></pre>
 
 ==========
 
 Let's look at how our printedNumber is constructed.
 
-```js [16]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="16">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + 2 + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = fn(input);
-console.log(printedNumber);
-```
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = fn(input);
+  console.log(printedNumber);
+</code></pre>
 
-----------
-
-Let's drop our definition of `fn` into our `printedNumber`.
-
-```js [11-13|16|12]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
-
-// ***** Statement will go here *****
-
-const fn = function(c) {
-  return x + y + 2 + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = fn(input);
-console.log(printedNumber);
-```
-
-----------
+==========
 
 Let's drop our definition of `fn` into our `printedNumber`.
 
-```js [16]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="11-13|16|12">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + 2 + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = x + y + 2 + input;
-console.log(printedNumber);
-```
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = fn(input);
+  console.log(printedNumber);
+</code></pre>
 
-----------
+==========
+
+Let's drop our definition of `fn` into our `printedNumber`.
+
+<pre data-id="code-animation"><code data-trim data-line-numbers="16">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
+
+  // ***** Statement will go here *****
+
+  const fn = function(c) {
+    return x + y + 2 + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = x + y + 2 + input;
+  console.log(printedNumber);
+</code></pre>
+
+==========
 
 Let's drop `input` into our `printedNumber`.
 
@@ -325,7 +348,7 @@ console.log(printedNumber);
 
 Note:  So `x = 4` in our `printedNumber`.
 
-----------
+==========
 
 `x = 4`.
 
@@ -351,7 +374,7 @@ console.log(printedNumber);
 
 Note:  So `x = 4` in our `printedNumber`.
 
-----------
+==========
 
 ```js [16]
 let x = 2;
