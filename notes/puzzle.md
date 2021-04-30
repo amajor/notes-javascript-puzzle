@@ -115,6 +115,32 @@ Note: Let's just substitute so we can see what we're working with.
 
 We initialize `fn` using `a` and `x`.
 
+<pre data-id="code-animation"><code data-trim data-line-numbers="13">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
+
+  // ***** Statement will go here *****
+
+  const fn = function(2) {
+    return function(c) {
+      return x + y + Math.abs(2) + c;
+    }; 
+  };
+  x = 4;
+  console.log(fn(Math.random() * 10));
+</code></pre>
+
+Note: Let's just substitute so we can see what we're working with.
+
+==========
+
+We initialize `fn` using `a` and `x`.
+
 <pre data-id="code-animation"><code data-trim data-line-numbers="11-13">
   let x = 2;
   let y = 8;
@@ -302,49 +328,77 @@ Let's drop our definition of `fn` into our `printedNumber`.
 
 Let's drop `input` into our `printedNumber`.
 
-```js [15|16]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="15|16">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + Math.abs(2) + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = x + y + 2 + ( Math.random() * 10 );
-console.log(printedNumber);
-```
+  const fn = function(c) {
+    return x + y + Math.abs(2) + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = x + y + 2 + ( input );
+  console.log(printedNumber);
+</code></pre>
+
+==========
+
+Let's drop `input` into our `printedNumber`.
+
+<pre data-id="code-animation"><code data-trim data-line-numbers="16">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
+
+  // ***** Statement will go here *****
+
+  const fn = function(c) {
+    return x + y + Math.abs(2) + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = x + y + 2 + ( Math.random() * 10 );
+  console.log(printedNumber);
+</code></pre>
+
+==========
+
+# Time to look at `x`
 
 ==========
 
 `x` is defined _AFTER_ the line we can edit.
 
-```js [14|9|14,16|16]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="14|9|14|14,16">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + Math.abs(2) + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = x + y + 2 + Math.random() * 10;
-console.log(printedNumber);
-```
+  const fn = function(c) {
+    return x + y + Math.abs(2) + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = x + y + 2 + Math.random() * 10;
+  console.log(printedNumber);
+</code></pre>
 
 Note:  So `x = 4` in our `printedNumber`.
 
@@ -352,49 +406,49 @@ Note:  So `x = 4` in our `printedNumber`.
 
 `x = 4`.
 
-```js [16]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="14,16|16">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + Math.abs(2) + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = 4 + y + 2 + Math.random() * 10;
-console.log(printedNumber);
-```
+  const fn = function(c) {
+    return x + y + Math.abs(2) + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = 4 + y + 2 + Math.random() * 10;
+  console.log(printedNumber);
+</code></pre>
 
 Note:  So `x = 4` in our `printedNumber`.
 
 ==========
 
-```js [16]
-let x = 2;
-let y = 8;
-const a = function(b) {
-  return function(c) {
-    return x + y + Math.abs(b) + c;
-  }; 
-};
+<pre data-id="code-animation"><code data-trim data-line-numbers="16">
+  let x = 2;
+  let y = 8;
+  const a = function(b) {
+    return function(c) {
+      return x + y + Math.abs(b) + c;
+    }; 
+  };
 
-// ***** Statement will go here *****
+  // ***** Statement will go here *****
 
-const fn = function(c) {
-  return x + y + Math.abs(2) + c;
-};
-x = 4;
-input = Math.random() * 10;
-printedNumber = y + 6 + Math.random() * 10;
-console.log(printedNumber);
-```
+  const fn = function(c) {
+    return x + y + Math.abs(2) + c;
+  };
+  x = 4;
+  input = Math.random() * 10;
+  printedNumber = y + 6 + Math.random() * 10;
+  console.log(printedNumber);
+</code></pre>
 
 ==========
 
@@ -416,17 +470,40 @@ console.log(printedNumber);
 
 ==========
 
-`10 < y + 6 + Math.random() * 10 < 20`
+`10  <  ( printedNumber )  <  20`
+
+==========
+
+`10  <  ( y + 6 + Math.random()*10 )  <  20`
+
+==========
+
+`10  <  ( y + 6 + Math.random()*10 )  <  20`
 
 We can say that our edges are...
 
-```js
-// Minimum Edge
-10 = y + 6 + Math.random() * 10
+<pre data-id="code-animation"><code data-trim>
+  // Minimum Edge
+  10 < y + 6 + Math.random() * 10
 
-// Maximum Edge
-20 = y + 6 + Math.random() * 10
-```
+  // Maximum Edge
+  20 > y + 6 + Math.random() * 10
+</code></pre>
+
+==========
+
+
+`10  <  ( y + 6 + Math.random()*10 )  <  20`
+
+We can say that our edges are...
+
+<pre data-id="code-animation"><code data-trim>
+  // Minimum Edge
+  10 = y + 6 + Math.random() * 10
+
+  // Maximum Edge
+  20 = y + 6 + Math.random() * 10
+</code></pre>
 
 ==========
 
@@ -452,7 +529,7 @@ Minimum edge for `Math.random() = 0`
 y = 4 // <-- our minimum edge will be found when y = 4
 ```
 
-----------
+==========
 
 ## Maximum Edge
 
@@ -468,7 +545,7 @@ y = 4  // <-- our maximum edge will be found when y = 4
 
 Note: We know that `Math.random()` will never reach `0` or `1` but will always be in between, so with `y = 4` set in our code, we can be confident that our printed number will always be between `10` and `20`.
 
-----------
+==========
 
 # `y = 4`
 
